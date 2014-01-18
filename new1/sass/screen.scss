@@ -1,0 +1,14 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+@include font-face("open_sansregular", font-files("opensans/opensans_regular_macroman/OpenSans-Regular-webfont.woff", "opensans/opensans_regular_macroman/OpenSans-Regular-webfont.ttf", "opensans/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular"), "opensans/opensans_regular_macroman/OpenSans-Regular-webfont.eot", normal);
+@import "partials/fontAwesome/font-awesome";
+@import "partials/base";
+@import "partials/philly";
+@import "partials/gallery";
+@import "partials/contact"

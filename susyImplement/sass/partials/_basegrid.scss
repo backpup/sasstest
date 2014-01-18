@@ -1,0 +1,70 @@
+@import "susy";
+$total-columns:12;
+$column-width:74px;
+$gutter-width:5px;
+$grid-padding:0;
+
+$container-style:magic;
+$container-width:960px;
+
+
+/*basic page layout*/
+body{
+	font-family:Droid, helvetica, sans-serif;
+	font-size:1em;
+	line-height:1.5;
+}
+h1, h2, h3{
+	font-family:Bitter, Times, sans-serif;
+}
+
+.wrapper{
+	@include container;
+	//@include susy-grid-background;
+}
+.main-header{
+	@include span-columns(12, 12);
+}
+.banner{
+
+	@include span-columns(12, 12);
+	margin-top:5px;
+	div{
+		@include span-columns(4, 12);
+		@include nth-omega(3n);
+	}
+}
+// .banner{
+
+// 	@include with-grid-settings(12, 316px, 6px, 0){
+// 		div{
+// 			@include span-columns(4, 12);
+// 			@include nth-omega(3n);
+// 		}
+// 	}
+// }
+article{
+	@include span-columns(8, 12);
+}
+aside{
+	@include span-columns(4 omega, 12);
+}
+footer{
+	@include span-columns(12, 12);
+	.footer-nav{
+		@include span-columns(12, 12);
+	}
+	.col{
+		@include span-columns(4, 12);
+		@include nth-omega(3n);
+	}
+	ul{
+		@include columns(2);
+	}
+	p{
+		clear:both;
+
+	}
+}
+
+/*end of basic page layout*/

@@ -1,0 +1,255 @@
+$ash:#4C4341;
+$dullGray:#646266;
+$pewterBlue:#7B798F;
+$darkTan:#ADA982;
+$medTan:#D8D5BC; 
+$lightTan:#EDE4D6;
+$darkGreen:#667F6A;
+$burntOrange:#DB7E40;
+
+
+html{
+	background:$pewterBlue;
+}
+body{
+	font-size:16px;
+	background-color:#fff;
+	width:960px;
+	margin:0 auto;
+	line-height:1.4;
+}
+header{
+	height:125px;
+	background:image-url("desolve_logo.png") 20px 10px no-repeat $dullGray;
+	@include clearfix();
+	h1{
+		font-family:arial, helvetica;
+		font-size:2em;
+		color:white;
+		padding-left:4em;
+		text-transform:uppercase;
+		float:left;
+		line-height:120px;
+		font-weight:bolder;
+	}
+	span{
+		font-family:verdana;
+		color:white;
+		letter-spacing:0;
+		font-size:95%;
+		margin-left:10px;
+		text-transform:lowercase;
+		font-style:normal;
+		float:left;
+		line-height:120px;
+	}
+
+}
+
+//navigation stuff 
+
+nav{
+	margin-top:20px;
+	height:70px;
+
+	ul{
+		@include clearfix();
+	}
+	li{
+		float:left;
+		margin-left:2em;
+		text-align:center;
+	}
+	a{
+		display:block;
+		padding-left:20px;
+		font-size:1.2em;
+		text-transform:uppercase;
+		text-decoration:none;
+		color:$dullGray;
+
+		&:hover{
+			color:orange;
+		}
+	}
+
+	.gallery{
+		background: image-url("icon_sprites_25.png") no-repeat 0 3px;
+	}
+	.gear{
+		background:image-url("icon_sprites_25.png") no-repeat 38px -98px;
+	}
+	.interact{
+		background:image-url("icon_sprites_25.png") no-repeat 55px -197px;
+	}
+	.shop{
+		background:image-url("icon_sprites_25.png") no-repeat 6px -297px;
+	}
+	em{
+		display:block;
+		font-size:85%;
+		text-transform:lowercase;
+		color:$dullGray;
+		&:hover{
+			color:$dullGray;
+		}
+	}
+}
+//banner
+#banner{
+	background:image-url("gallery_banner.jpg");
+	height:300px;
+	@include clearfix();
+	h2{
+		color:#fff;
+		padding:260px 0 0 30px;
+		text-transform:uppercase;
+		letter-spacing:.1em;
+		font-size:1.5em;
+		float:left;
+	}
+	p{
+		padding:20px 10px;
+		float:right;
+		width:220px;
+		color:#fff;
+		height:260px;
+		background:rgba($pewterBlue, .7);
+	}
+
+}
+
+//main
+.main{
+	@include clearfix();
+}
+
+#mainContent{
+	@include clearfix();
+	width:656px;
+	margin-left:32px;
+	float:left;
+	margin-top:30px;
+	h1{
+		font-size:2em;
+		padding-bottom:.2em;
+		border-bottom:2px solid black;
+		margin-bottom:20px;
+		background:image-url("icon_sprites_50.png") no-repeat right -800px ;
+	}
+	h2{
+		font-size:1.5em;
+		padding-bottom:.2em;
+		border-bottom:2px solid black;
+		margin: 30px 0 20px;
+	}
+	section{
+		font-size:95%;
+		padding:0 15px 25px;
+		width:280px;
+		float:left;
+		margin:30px 0;
+		margin-right:26px;
+		background:$lightTan;
+		border-radius:10px 0 10px 0;
+		h2{
+			margin-top:15px;
+
+		}
+		ul{
+			text-indent:15px;
+		}
+		li{
+			list-style-type:disc;
+			list-style-position:inside;
+		}
+
+	}
+
+	section+section{
+		margin-right:0;
+	}
+}
+
+aside{
+	margin-top:10px;
+	float:right;
+	width:220px;
+	margin-right:20px;
+	h3{
+		padding-top:20px;
+		font-size:1.1em;
+		margin-bottom:15px;
+		text-align:center;
+	}
+	li{
+		display:block;
+		background:$medTan;
+		padding:.2em;
+		padding-left:1em;
+		margin-bottom:1px;
+		&:hover{
+			background:$ash;
+			cursor:pointer;
+			color:#fff;
+		}
+		&:nth-child(2n){
+			background:$lightTan;
+			&:hover{
+			background:$ash;
+			cursor:pointer;
+			color:#fff;
+			}
+
+		}
+	}
+	p{
+		margin-bottom:10px;
+	}
+	img{
+		width:80%;
+		display:block;
+		margin:0 auto 10px;
+	}
+}
+
+footer{
+	background:$darkTan;
+	padding-top:30px;
+	height:120px;
+	h2{
+		text-transform:uppercase;
+		color:darken($darkTan, 30%);
+	}
+	form{
+		float:left;
+		margin-left:32px;
+		width:300px;
+	}
+	input[type="text"]{
+		width:210px;
+	}
+	input[type="submit"]{
+		display:block;
+		margin:10px 0;
+	}
+	section{
+		margin-right:20px;
+		height:120px;
+		float:right;
+		a{
+			text-align:right;
+			padding-left:95px;
+			background:image-url("tweet_90.png") no-repeat;
+			height:80px;
+			display:block;
+			line-height:80px;
+			text-decoration:none;
+			color:darken($darkTan, 35%);
+		}
+		em{
+			display:block;
+			color:darken($darkTan, 35%);
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.info{
+	margin-bottom:5px;
+}
+
+#about-main{
+	@include main-format;
+	a{
+		display:inline;
+		font-weight:normal;
+	}
+	h1{
+		font-family:Georgia, Bitter, Times, "Times New Roman", serif;
+		font-size:1.5em;
+		&:nth-child(1n+2){
+			margin-top:0;
+		}
+	}
+	.color-header{
+		font-size:2.7em;
+		color:$pink;
+		font-weight:bold;
+		padding-left:.36em;
+		margin:.36em 0;
+	}
+}
+#currentImage{
+	width:270px;
+	height:270px;
+	margin:.5em auto 1.5em;
+	img{
+		width:270px;
+		border:3px solid gray;
+	}
+	
+	
+}
+#imageList{
+	width:565px;
+	margin:0 auto;
+	li{
+		list-style:none;
+		display:inline-block;
+	}
+	img{
+		position:relative;
+		height:90px;
+		width:90px;
+		&:hover{
+			cursor:pointer;
+		}
+	}
+}
+.academic-links{
+	background:#fbae2c;
+	padding-bottom:1em;
+	color:white;
+	h1{
+		font-size:1.6em;
+		background:image-url("diag_pattern.png");
+		padding-left:.625em;
+	}
+	li{
+		padding:0 1.11em;
+		margin:.8em 0 0;
+	}
+	a{
+		font-size:90%;
+		color:white;
+		text-decoration:none;
+		display:block;
+
+		&:hover{
+			background: url(../images/diag_pattern.png) rgba($pink, .4);
+		}
+	}
+}
+.address{
+	float:right;
+	h3{
+		font-size:1.1em;
+		color:$orangish;
+		font-weight:bold;
+		padding: 0 .8em .5em;
+	}
+}
+#mapCanvas{
+	border:2px solid black;
+	margin-left:1em;
+	margin-bottom:1em;
+}

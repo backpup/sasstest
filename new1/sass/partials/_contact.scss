@@ -1,0 +1,113 @@
+#contactMain{
+	width:656px;
+	margin-left:32px;
+	float:left;
+	margin-top:30px;
+	&>h1{
+		font-size:2em;
+		color:$ash;
+		padding-bottom:.1em;
+		background:image-url("icon_sprites_50.png") no-repeat right;
+		border-bottom: 1px solid $ash;
+		margin-bottom:15px;
+	}
+	h2{
+		font-size:1.3em;
+		color:$ash;
+		padding-bottom:.25em;
+	}
+}
+.socialMedia{
+	border-top:1px solid $ash;
+	border-bottom:1px solid $ash;
+	padding:10px 0 5px 0 ;
+	ul{
+		list-style:none;
+		width:620px;
+		margin:0 auto;
+	}
+	li{
+		display:inline-block;
+		height:50px;
+		width:200px;
+	}
+	a{
+		display:block;
+		line-height:50px;
+		color:$pewterBlue;
+		text-decoration:none;
+		&:hover{
+			color:$burntOrange;
+			em{
+				color:$pewterBlue;
+			}
+		}
+	
+	}
+	em{
+		padding-left:5px;
+		color:black;
+		&:hover{
+			color:$pewterBlue;
+		}
+	}
+}
+#contactInfo{
+	margin-top:15px;
+	fieldset{
+		background:$lightTan;
+		margin-bottom:5px;
+		border-radius:5px;
+		padding:10px;
+		legend{
+			position:absolute;
+			top:0;
+			left:-2000em;
+		}
+		&:before{
+			content:attr(title);
+			display:block;
+			border-bottom:1px dotted $ash;
+		}
+		p{
+			font-size:90%;
+			font-style:italic;
+			margin-top:.5em;
+		}
+	}
+	label{
+		margin-top:.5em;
+		display:block;
+		font-size:1em;
+	}
+	.inline{
+		display:inline;
+	}
+
+}
+input[type="radio"]{
+	margin-bottom:.8em;
+}
+input[type="submit"]{
+	display:block;
+}
+input[type="text"], input[type="email"], input[type="url"], textarea {
+	width: 250px;
+}
+#traditionalContact{
+	h2{
+		font-size:1.1em;
+		margin-top:1em;
+		border-bottom:1px solid $ash;
+	}
+	p{
+		padding:1.4em 0 1em 0;
+	}
+	.phone-number{
+		letter-spacing:.075em;
+		display:block;
+		padding-bottom:.5em;
+	}
+	border-bottom:1px solid $ash;
+}
+

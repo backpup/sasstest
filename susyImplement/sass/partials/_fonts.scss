@@ -1,0 +1,7 @@
+
+/*fonts used in the site*/
+@include font-face("Droid", font-files("DroidSans-webfont.woff", "DroidSans-webfont.ttf"), "DroidSans-webfont.eot");
+@include font-face("Droid", font-files("DroidSans-Bold-webfont.woff", "DroidSans-Bold-webfont.ttf"), "DroidSans-Bold-webfont.eot", bold, normal);
+@include font-face("Bitter", font-files("Bitter-Regular-webfont.woff", "Bitter-Regular-webfont.ttf"), "Bitter-Regular-webfont.eot");
+@include font-face("Bitter", font-files("Bitter-Italic-webfont.woff", "Bitter-Italic-webfont.ttf"), "Bitter-Italic-webfont.eot", normal, italic);
+@include font-face("Bitter", font-files("Bitter-Bold-webfont.woff", "Bitter-Bold-webfont.ttf"), "Bitter-Bold-webfont.eot", bold, normal);

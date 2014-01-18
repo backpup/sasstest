@@ -1,0 +1,304 @@
+html{
+	background:$background;
+}
+.main-header{
+	height:388px;
+	background:image-url("main_back.jpg") no-repeat;
+	position:relative;
+	h1{
+		position:absolute;
+		left:-999em;
+	}
+	> a{
+		position:absolute;
+		top:0;
+		width:160px;
+		height:150px;
+		background:image-url("ralogo.png") no-repeat #000;
+	}
+	ul{
+		position:absolute;
+		left:160px;
+		top:0;
+		height:40px;
+		background:rgba(#000, .5);
+		width:800px;
+	}
+	li{
+		display:inline-block;
+		a{
+			text-decoration:none;
+			font-size:95%;
+			color:white;
+			line-height:40px;
+			padding:0 1.8em;
+			&:hover{
+				color:$orangish;
+			}
+		}
+
+	}
+	
+	h2{
+		position:absolute;
+		text-align:right;
+		padding:1.5em 1em 1.5em 0;
+		font-size:1.2em;
+		background:rgba(#000, .5);
+		color:white;
+		top:30px;
+		right:0;
+		width:200px;
+	}
+	.orange{ color:$orangish; text-transform:uppercase; font-weight:bold; }
+	.blue{ color:$blue; text-transform:uppercase; font-weight:bold; }
+	.pink{ color:$pink; text-transform:uppercase;font-weight:bold; }
+	.yellow{ color:$yellow; text-transform:capitalize;}
+}
+%banner{
+	position:relative;
+	padding-bottom:1em;
+	h1{
+		font-size:1.6em;
+		text-transform:capitalize;
+		color:white;
+		padding-left:.6em;
+		background:image-url("diag_pattern.png");
+
+	}
+	img{
+		display:block;
+		margin:0 auto;
+		margin-bottom:2em;
+	}
+	p{
+		padding:0 1em;
+	}
+	a{
+		text-decoration:none;
+		display:block;
+		margin: 0 1em;
+		color:white;
+		&:hover{
+			background:image-url("diag_pattern.png");
+		}
+	}
+}
+
+.student{
+	@extend %banner;
+	background-color:$pink;
+}
+.current-show{
+	@extend %banner;
+	background:$orangish;
+}
+.coming-events{
+	position:relative;
+	background:$blue;
+	padding-bottom:1em;
+	h1{
+		font-size:1.6em;
+		text-transform:capitalize;
+		color:white;
+		padding-left:.6em;
+		background:image-url("diag_pattern.png");
+
+	}
+	img{
+		display:block;
+		margin:0 auto;
+		margin-bottom:2em;
+	}
+	li{
+		font-size:95%;
+		padding:0 1em;
+	}
+	.date{
+		display:block;
+		color:white;
+		font-weight:block;
+	}
+}
+.condense{
+	max-height:285px;
+	overflow:hidden;
+	@include single-transition(max-height, 0.3s, ease-in);
+	// @include transition-property(max-height);
+	// @include transition-duration(0.3s);
+	// @include transition-timing-function(ease-in); 
+	&:after{
+		content:" ";
+		background:url(../images/hover.png) no-repeat right top;
+		width:30px;
+		height:45px;
+		position:absolute;
+		right:0;
+		top:0;
+	}
+	&:hover{
+		max-height:999px;
+	}
+	&:hover:after{
+		background-position:right bottom;
+	}
+}
+
+// .condense{
+// 	h1{
+// 		background:url(../images/diag_pattern.png), url(../images/hover.png) no-repeat right 0;
+// 	}
+// 	&:hover{
+// 		h1{
+// 			background:url(../images/diag_pattern.png), url(../images/hover.png) no-repeat right -45px;
+// 		}
+// 	}
+// }
+
+@mixin main-format{
+	margin-top:5px;
+	background:white;
+	a{
+		font-weight:bold;
+		text-decoration:none;
+		display:block;
+		padding-right:1em;
+		color:$blue;
+		text-align:right;
+		&:hover{
+			color:$orangish;
+		}
+	}
+	h1{
+		font-size:1.3em;
+		margin:.77em 0;
+		padding: 0 .7em;
+
+	}
+	p{
+		padding:0 .9em .9em;
+	}
+}
+#main{
+	@include main-format;
+}
+aside{
+	margin-top:5px;
+}
+.profile{
+	@extend %banner;
+	background:$orangish;
+}
+.social-media{
+	margin-top:5px;
+	padding-bottom:1em;
+	background:white;
+	@include background-image(linear-gradient(bottom, white, white 50%, gray 90%));
+	h1{
+		font-size:1.6em;
+		text-transform:capitalize;
+		color:white;
+		padding-left:.6em;
+		background:image-url("diag_pattern.png") gray;
+
+	}
+	
+	li{
+		padding:1em 0 0 1.5em;
+		display:inline-block;
+	}
+	.facebook{ color:#305891;}
+	.twitter{ color:#2CA8D2; }
+	.linkedin{ color:#2CA8D2; }
+	.googleplus{ color: #CE4D39; }
+}
+.info{
+	margin-top:5px;
+	padding-bottom:1em;
+	background:$blue;
+	h1{
+		font-size:1.6em;
+		text-transform:capitalize;
+		color:white;
+		padding-left:.6em;
+		background:image-url("diag_pattern.png");
+	}
+	ul{
+		padding:.9em 1em 0;
+	}
+	li{
+		margin-bottom:2px;
+	}
+	a{
+		text-decoration:none;
+		color:white;
+		display:block;
+		background:$orangish;
+		&:hover{
+			background:image-url("diag_pattern.png");
+			color:$orangish;
+			background-color:none;
+		}
+	}
+}
+.page-footer{
+	margin-top:5px;
+	background:$yellow;
+	>p{
+		padding-top:2.5em;
+		padding-bottom:.2em;
+		font-size:70%;
+		text-align:center;
+	}
+	a{
+		color:black;
+	}
+	hr{
+		width:90%;
+		color:$offyellow;
+	}
+}
+.footer-nav{
+	@include background-image(linear-gradient(left, $yellow, $yellow 33.3%, $offyellow 33.3%, $offyellow 33.5%, 
+		$yellow 33.5%, $yellow 66.3%, $offyellow 66.3%, $offyellow 66.5%, $yellow 66.5%));
+	margin-top:2em;
+	h2{
+		font-size:1em;
+		text-align:center;
+		padding-bottom:.8em;
+		text-transform:uppercase;
+	}
+	ul{
+		padding:0 1.5em;
+	}
+	li{
+		//font-size:75%;
+	}
+	a{
+		letter-spacing:-.03em;
+		font-size:70%;
+		text-decoration:none;
+		color:black;
+		&:hover{
+			color:white;
+			@include text-shadow(1px, 1px);
+		}
+	}
+}
+#privacy{
+	padding:20px 20px 40px;
+	h3{
+		font-size:1em;
+		text-transform:uppercase;
+		text-align:center;
+		margin-bottom:1em;
+	}
+	p{
+		font-size:.5em;
+		text-align:justify;
+		@include single-transition(font-size, .3s, ease-in);
+		&:hover{
+			font-size:.8em;
+		}
+	}
+}
